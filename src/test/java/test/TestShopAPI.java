@@ -17,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class TestShopAPI {
-    Card invalidHolderCard = Generator.getInvalidHolderCard();
 
     @BeforeAll
     static void setUpAll() {

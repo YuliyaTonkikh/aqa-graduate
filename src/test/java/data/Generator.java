@@ -38,12 +38,8 @@ public class Generator {
         return faker.number().digits(15);
     }
 
-    public static String generateInvalid1() {
-        return faker.number().digits(1);
-    }
-
-    public static String generateInvalid2() {
-        return faker.number().digits(2);
+    public static String getRandomNumber(int length) {
+        return faker.number().digits(length);
     }
 
     public static String generateFakeHolder() {
@@ -83,15 +79,15 @@ public class Generator {
     }
 
     public static Card getInvalidYear1number() {
-        return new Card(generateRandomCardNumber(), generateMonth(1), generateInvalid1(), generateName(), generateCVC());
+        return new Card(generateRandomCardNumber(), generateMonth(1), getRandomNumber(1), generateName(), generateCVC());
     }
 
     public static Card getInvalidCVV1number() {
-        return new Card(generateRandomCardNumber(), generateMonth(1), generateYear(1), generateName(), generateInvalid1());
+        return new Card(generateRandomCardNumber(), generateMonth(1), generateYear(1), generateName(), getRandomNumber(1));
     }
 
     public static Card getInvalidCVV2numbers() {
-        return new Card(generateRandomCardNumber(), generateMonth(1), generateYear(1), generateName(), generateInvalid2());
+        return new Card(generateRandomCardNumber(), generateMonth(1), generateYear(1), generateName(), getRandomNumber(2));
     }
 
     public static Card getExpiredMonth() {
